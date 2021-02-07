@@ -27,9 +27,10 @@ class ViewController: UIViewController {
         
         if let jokeToShare = labelJoke?.text {
             let avc = UIActivityViewController(activityItems: [jokeToShare], applicationActivities: nil)
+            present(avc, animated: true, completion: nil)
         }
         
-        present(avc, animated: true, completion: nil)
+        
     }
 }
 
