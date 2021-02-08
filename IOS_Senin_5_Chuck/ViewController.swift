@@ -11,19 +11,41 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var labelJoke: UILabel!
     
+    @IBOutlet weak var buttonShare: UIBarButtonItem!
+    
+    @IBOutlet weak var buttonRefresh: UIBarButtonItem!
+    
+    @IBOutlet weak var buttonAddToFavorites: UIButton!
+    
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-        print(getRandomJoke())
+       
     }
 
     @IBAction func pushRefreshAction(_ sender: Any) {
         
-        labelJoke.text = getRandomJoke()
+        buttonRefresh.isEnabled = false
+        indicator.startAnimating()
+        getRandomJoke { (joke) in
+            
+            DispatchQueue.main.async {
+                
+                self.labelJoke.text = joke
+                self.indicator.stopAnimating()
+                self.buttonRefresh.isEnabled = true
+                self.buttonShare.isEnabled = true
+                self.buttonAddToFavorites.isEnabled = true
+                
+            }
+            
+        }
     }
     
     @IBAction func pushShareAction(_ sender: Any) {
+        
+        
         
         if let jokeToShare = labelJoke?.text {
             let avc = UIActivityViewController(activityItems: [jokeToShare], applicationActivities: nil)
@@ -32,5 +54,10 @@ class ViewController: UIViewController {
         
         
     }
+    @IBAction func pushAddToFavorites(_ sender: Any) {
+        addJokeToFavorites(newJoke: labelJoke.text!)
+    }
+    
+    
 }
 
