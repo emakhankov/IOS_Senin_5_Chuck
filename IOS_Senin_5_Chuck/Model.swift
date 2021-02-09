@@ -20,7 +20,7 @@ func getRandomJoke(block: (String)->Void) {
         
         let value = jsonDictionary.object(forKey: "value") as! NSDictionary
         
-        block(value.object(forKey: "joke") as! String)
+        block((value.object(forKey: "joke") as! String).replacingOccurrences(of: "&quot;", with: "'"))
         return
         
     } catch {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B11C459F25D2EF1E00C33248 /* FavoritesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11C459E25D2EF1E00C33248 /* FavoritesController.swift */; };
 		B19EF4C125D033E300397834 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19EF4C025D033E300397834 /* AppDelegate.swift */; };
 		B19EF4C325D033E300397834 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19EF4C225D033E300397834 /* SceneDelegate.swift */; };
 		B19EF4C525D033E300397834 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19EF4C425D033E300397834 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B11C459E25D2EF1E00C33248 /* FavoritesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesController.swift; sourceTree = "<group>"; };
 		B19EF4BD25D033E300397834 /* IOS_Senin_5_Chuck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOS_Senin_5_Chuck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B19EF4C025D033E300397834 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B19EF4C225D033E300397834 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				B19EF4C925D033E400397834 /* Assets.xcassets */,
 				B19EF4CB25D033E400397834 /* LaunchScreen.storyboard */,
 				B19EF4CE25D033E400397834 /* Info.plist */,
+				B11C459E25D2EF1E00C33248 /* FavoritesController.swift */,
 			);
 			path = IOS_Senin_5_Chuck;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			files = (
 				B19EF4C525D033E300397834 /* ViewController.swift in Sources */,
 				B19EF4C125D033E300397834 /* AppDelegate.swift in Sources */,
+				B11C459F25D2EF1E00C33248 /* FavoritesController.swift in Sources */,
 				B19EF4C325D033E300397834 /* SceneDelegate.swift in Sources */,
 				B19EF4D625D0355C00397834 /* Model.swift in Sources */,
 			);
